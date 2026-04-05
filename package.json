@@ -1,0 +1,28 @@
+{
+  "name": "base-l2-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for the Base L2 ecosystem",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network baseMainnet",
+    "deploy:all:sepolia": "hardhat run scripts/deployAll.js --network baseSepolia",
+    "deploy:all:mainnet": "hardhat run scripts/deployAll.js --network baseMainnet",
+    "verify": "hardhat run scripts/verify.js --network baseMainnet",
+    "mint": "hardhat run scripts/mintTokens.js --network baseMainnet",
+    "setup-staking": "hardhat run scripts/setupStaking.js --network baseMainnet",
+    "lint": "solhint contracts/**/*.sol",
+    "coverage": "hardhat coverage"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "hardhat": "^2.19.0",
+    "solhint": "^4.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.8.0"
+  }
+}
